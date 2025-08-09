@@ -1,6 +1,6 @@
 # tim2dump
 
-**tim2dump** is a modern C++20 command-line utility for working with PlayStation 2 **TIM2** image format files.
+**tim2dump** is a simple command-line utility for working with PlayStation 2 **TIM2** image format files.
 
 It can parse TIM2 files, display detailed information, export images, and even visualize them directly in your terminal.
 
