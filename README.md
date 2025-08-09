@@ -84,17 +84,11 @@ Example:
 tim2dump example.tim2 --export png --out out/image
 ```
 
----
-
 ## Credits
 
 * **PNG export** uses [`stb_image_write.h`](https://github.com/nothings/stb)
   by [Sean Barrett](https://nothings.org/), licensed under **public domain** / **MIT**.
-
----
-
+* **TIM2 specifications** at https://github.com/GirianSeed/tim2
 ## License
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
-```
