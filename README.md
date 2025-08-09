@@ -15,7 +15,6 @@ It can parse TIM2 files, display detailed information, export images, and even v
   - CLUT (palette) support with `CSM1` / `CSM2` modes
   - MipMap support for multi-level textures
 - **Terminal visualization**:
-  - ASCII art mode
   - ANSI 256-color block rendering
 - **Minimal dependencies** – Only uses one external header for PNG export.
 
