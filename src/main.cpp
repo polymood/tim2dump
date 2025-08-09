@@ -17,7 +17,6 @@ void printUsage(const char* programName) {
     std::cout << "Commands:\n";
     std::cout << "  info <file>           Display detailed information about TIM2 file\n";
     std::cout << "  export <file> [fmt]   Export images (fmt: bmp or png, default: bmp)\n";
-    std::cout << "  view <file> [pic]     Display image in terminal (ASCII art)\n";
     std::cout << "  viewc <file> [pic]    Display image with colors (ANSI terminal)\n";
     std::cout << "\nOptions:\n";
     std::cout << "  -v, --verbose         Show detailed information\n";
