@@ -1,0 +1,107 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+bin/
+lib/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+tim2dump
+tim2dump.exe
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.cache/
+.clangd/
+.ccls-cache/
+
+# Python virtual environment (if used for scripts)
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Test files and outputs
+test_output/
+*.tim2
+*.tm2
+*.bmp
+*.png
+!third_party/**
+
+# Documentation build
+docs/_build/
+docs/html/
+doxygen/
+
+# Package files
+*.tar.gz
+*.zip
+*.deb
+*.rpm
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Analysis results
+cppcheck-results.txt
+clang-tidy-results.txt
+valgrind-*.txt
+
+# Coverage reports
+*.gcov
+*.gcda
+*.gcno
+coverage/
+coverage.info
+
+*.sh
+RELEASE_CHECKLIST.md
+SETUP_GUIDE.mod
