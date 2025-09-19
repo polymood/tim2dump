@@ -1,6 +1,6 @@
 # TIM2dump
 
-A robust command-line utility for parsing, analyzing, and converting PlayStation 2 TIM2 texture format files.
+A comprehensive utility for extracting, converting, and analyzing PlayStation 2 TIM2 (Texture Image Map 2) format files. Supports all TIM2 pixel formats, CLUT palettes, mipmaps, and batch processing. Export textures to BMP/PNG for game modding, preservation, or analysis.
 
 ## Overview
 
