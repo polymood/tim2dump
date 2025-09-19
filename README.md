@@ -334,7 +334,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **stb_image_write** by Sean Barrett - Public domain image writing library
 - **PlayStation 2 Linux Community** - TIM2 format documentation
-- **PS2 Homebrew Community** - Testing and feedback
 
 ## References
 
