@@ -6,7 +6,7 @@ on:
     branches:
       - main
     tags:
-      - 'v*'  # PROPERLY INDENTED UNDER 'push:'
+      - 'v*'  # MUST BE INDENTED UNDER 'push:'
   workflow_dispatch: {}  # Allows manual triggering
 
 permissions:
@@ -75,21 +75,15 @@ jobs:
           ARCHIVE_NAME="tim2dump-${VERSION}-${{ matrix.platform.asset_suffix }}"
           if [[ "${{ runner.os }}" == "Windows" ]]; then
             cd dist && 7z a "../${ARCHIVE_NAME}.zip" * && cd ..
-            # Create checksum for zip
-            certutil -hashfile "${ARCHIVE_NAME}.zip" SHA256 > "${ARCHIVE_NAME}.zip.sha256"
           else
             cd dist && tar -czf "../${ARCHIVE_NAME}.tar.gz" * && cd ..
-            # Create checksum for tar.gz
-            sha256sum "${ARCHIVE_NAME}.tar.gz" > "${ARCHIVE_NAME}.tar.gz.sha256"
           fi
           
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: tim2dump-${{ matrix.platform.asset_suffix }}
-          path: |
-            *.${{ matrix.platform.archive_ext }}
-            *.sha256
+          path: "*.${{ matrix.platform.archive_ext }}"
 
   release:
     name: Create GitHub Release
@@ -104,19 +98,6 @@ jobs:
         with:
           path: artifacts
           
-      - name: Collect all checksums
-        shell: bash
-        run: |
-          # Collect all checksums into one file
-          echo "# SHA256 Checksums for ${{ github.ref_name }}" > checksums.txt
-          echo "" >> checksums.txt
-          for file in artifacts/**/*.sha256; do
-            if [ -f "$file" ]; then
-              cat "$file" >> checksums.txt
-              echo "" >> checksums.txt
-            fi
-          done
-          
       - name: Create Release and Upload Assets
         uses: softprops/action-gh-release@v2
         with:
@@ -126,5 +107,3 @@ jobs:
           files: |
             artifacts/**/*.zip
             artifacts/**/*.tar.gz
-            artifacts/**/*.sha256
-            checksums.txt
